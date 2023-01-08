@@ -21,7 +21,18 @@ Analysis in sdf:
 
 - Find how helpful a review is in terms of a ratio, and return the top 10 most helpful reviews, the corresponding reviewerID and the helpfulness ratio. 
 
+- We would like to determine the sentiment of some of the reviews across the categories. Sentiment Analysis is used with textual data very regularly. A common application includes determing whether the review associated with a product is positive, negative or neutral. We are going to attempt to determine the sentiment associated with the top 10 most helpful reviews from the food category, based on the ratio calculated in the previous section.
 
+tokenized list of words (removing stop words and checking for alphabets) 从hw2里面参考
+
+Sentiment analysis is a a natural language processing (NLP) technique that attempts to identify the emotional tone behind a body of text. In this case, we will try to determine how posiitve a review is. 
+
+We will be calculating the sentiment associated (系数） with each of these reviews. Sort the df by this column from highest sentiment to lowest.
+
+Now, moving back into SQL, we need you to run a query on the product_reviews_sdf to retrieve the titles of 2 products with the highest sentiment.
+
+
+--
 Mastering SQL is more beneficial than being able to use Spark commands (functions) as it will show up in more areas of programming and data science/analytics than just Spark.
 
 ### Techniques:
@@ -48,3 +59,4 @@ When loading data, Spark will try to infer its structure on its own. This proces
 2. Design schema from structure type for JSON object on Spark
 3. Cleaned Spark dataframe in SparkSQL by aggregation and division based on certain schema, formats and orders that fit on business targets.
 4. optimized SparkSQL query to analyze metrics and discover business insights
+5. tokenize for elementary NLP to do sentiment analysis on customer reviews
