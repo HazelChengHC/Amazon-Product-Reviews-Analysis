@@ -36,7 +36,7 @@ Now, moving back into SQL, we need you to run a query on the product_reviews_sdf
 Mastering SQL is more beneficial than being able to use Spark commands (functions) as it will show up in more areas of programming and data science/analytics than just Spark.
 
 ### Techniques:
-Spark, SparkSQL, EMR, Spark dataframes (sdf), schema design, JSON
+Spark, SparkSQL, EMR, Spark dataframes (sdf), schema design, JSON, NLP, OLTP, OLAP
 
 ### Datasets:
 
@@ -48,15 +48,15 @@ There are 3 JSON datasets with information about the products and 3 JSON dataset
 2. Toys & Games
 3. Home & Kitchen
 
+### Outline:
+
+set up EMR
+design JSON schema
+ingest files from S3 to Spark dataframe
+OLTP - data cleaning with query in SprakSQL (to fit schema and format requirement for certain business goals) 
+OLAP - data analysis (from big picuture of overview opinopn, then break down to rating yearly changing ratio, popular items, rating reviews)
+sentiment analysis (tokenize and calculate polarity_scores and query your results according to your critiria to find out the popular items by using a simple NLP.
 
 ### Challenges:
 When loading data, Spark will try to infer its structure on its own. This process is faulty because Spark will sometimes infer the type incorrectly. Spark's ability to determine types is not reliable, thus you will need to define a schema for [] and .
 
-----------------
-如果要写简历的话:
-
-1. ingest datasets from S3 bucket to Spark dataframe on EMR
-2. Design schema from structure type for JSON object on Spark
-3. Cleaned Spark dataframe in SparkSQL by aggregation and division based on certain schema, formats and orders that fit on business targets.
-4. optimized SparkSQL query to analyze metrics and discover business insights
-5. tokenize for elementary NLP to do sentiment analysis on customer reviews
